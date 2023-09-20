@@ -40,7 +40,7 @@ const Services = (props) => {
       </div>
     </div>
     <p>Don't care how it's made, you just need a dope website? I got you too.</p>
-    <Form formName="webdev" />
+    <Form formName="webdev" netlify data-netlify="true" />
     </div>
   )
 
@@ -54,7 +54,7 @@ const Services = (props) => {
         You can also host your existing website on our servers at fair and transparent prices.
       </p>
 
-      <Form formName="webhosting" />
+      <Form formName="webhosting" netlify dataNetlify="true" />
     </div>
   )
 

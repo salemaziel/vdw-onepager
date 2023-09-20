@@ -248,7 +248,7 @@ const Main = (props) => {
           </ol>
         </p>
         <br />
-        <Form formName="consultations" />
+        <Form formName="consultations" netlify data-netlify="true"/>
         {close}
       </article>
 

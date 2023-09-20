@@ -8,8 +8,9 @@ const Form = (props) => {
       action="/thanks"
       name={props.formName}
       method="POST"
-      data-netlify="true"
+      data-netlify={props.dataNetlify}
       data-netlify-honeypot="bot-field"
+      netlify
     >
       <input type="hidden" name="form-name" value={props.formName} />
       <div className="field half first">
