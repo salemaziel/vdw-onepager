@@ -47,8 +47,8 @@ const Layout = ({ children, location }) => {
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'RBL Art Designs - Tech For the People.  Web development and tech consulting.' },
-              { name: 'keywords', content: 'RBL Art Designs, RBL Art, web development, tech consulting, for the people' },
+              { name: 'description', content: 'Via Del Web | Web Solutions for Small Businesses and Entrepreneurs' },
+              { name: 'keywords', content: 'Via Del Web, Web Solutions, Solutions for Small Businesses, Solutions for Entrepreneurs, web development, tech consulting, cloud hosting' },
             ]}
           >
             <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
