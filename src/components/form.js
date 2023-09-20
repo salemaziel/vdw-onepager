@@ -39,10 +39,11 @@ const Form = (props) => {
       method="POST"
       data-netlify={props.dataNetlify}
       netlify
-      onSubmit={handleSubmit} // Code Improvement Suggestion 1
+      onSubmit={handleSubmit}
+      aria-label={props.ariaLabel}
     >
       <input type="hidden" name="form-name" value={props.formName} />
-      <input type="hidden" name="bot-field" />
+      <input type="hidden" name="bot-field" aria-hidden="true" />
       <div className="field half first">
         <label htmlFor="name">Name*</label>
         <input 
@@ -51,16 +52,20 @@ const Form = (props) => {
         id="name" 
         onChange={handleChange}
         required
+        aria-required="true"
+        aria-label="Name"
         />
       </div>
       <div className="field half">
         <label htmlFor="email">Email*</label>
         <input 
-        type="text" 
+        type="email" 
         name="email" 
         id="email" 
         onChange={handleChange}
         required
+        aria-required="true"
+        aria-label="Email"
         />
       </div>
       <div className="field">
@@ -70,6 +75,7 @@ const Form = (props) => {
         id="message" 
         rows="4" 
         onChange={handleChange}
+        aria-label="Message"
         />
       </div>
       <ul className="actions">
@@ -78,6 +84,7 @@ const Form = (props) => {
           type="submit" 
           value="Send Message" 
           className="special" 
+          aria-label="Submit"
           />
         </li>
       </ul>
@@ -85,8 +92,9 @@ const Form = (props) => {
   );
 }
 
+export default Form;
+
 Form.propTypes = {
     formName: PropTypes.string,
 }
 
-export default Form;

@@ -7,6 +7,7 @@ import { RiTwitterFill } from '@react-icons/all-files/ri/RiTwitterFill'
 import { RiInstagramFill } from '@react-icons/all-files/ri/RiInstagramFill'
 import { RiGithubFill } from '@react-icons/all-files/ri/RiGithubFill'
 import { RiYoutubeFill } from '@react-icons/all-files/ri/RiYoutubeFill'
+import { RiLinkedinBoxFill } from '@react-icons/all-files/ri/RiLinkedinBoxFill'
 
 import Form from './form'
 import Services from './Pages/services/services'
@@ -248,7 +249,7 @@ const Main = (props) => {
           </ol>
         </p>
         <br />
-        <Form formName="consultations" netlify data-netlify="true"/>
+        <Form formName="consultations" ariaLabel="Consultations Form" netlify data-netlify="true" dataNetlify="true"/>
         {close}
       </article>
 
@@ -320,33 +321,35 @@ const Main = (props) => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          aria-label="Contact Form"
         >
           <input type="hidden" name="form-name" value="contact" />
           <div className="field half first">
             <label htmlFor="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <input type="text" name="name" id="name" required aria-label="Name" aria-required="true" />
           </div>
           <div className="field half">
             <label htmlFor="email">Email</label>
-            <input type="text" name="email" id="email" />
+            <input type="email" name="email" id="email" required aria-label='Email' aria-required="true" />
           </div>
           <div className="field">
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" rows="4"></textarea>
+            <textarea name="message" id="message" rows="4" required aria-label='Message' aria-required="true"></textarea>
           </div>
           <ul className="actions">
             <li>
-              <input type="submit" value="Send Message" className="special" />
+              <input type="submit" value="Send Message" className="special" aria-label="Submit" />
             </li>
             <li>
-              <input type="reset" value="Reset" />
+              <input type="reset" value="Reset" aria-label='reset'/>
             </li>
           </ul>
         </form>
         <ul className="icons">
           <li>
-            <Link
-              to=""
+            <a
+              to="https://twitter.com/viadelweb"
               className="icon"
               rel="noopener noreferrer"
               target="_blank"
@@ -360,11 +363,11 @@ const Main = (props) => {
                 }}
               />
               <span className="label">Twitter</span>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to=""
+            <a
+              to="https://facebook.com/viadelweb"
               className="icon"
               rel="noopener noreferrer"
               target="_blank"
@@ -378,11 +381,11 @@ const Main = (props) => {
                 }}
               />
               <span className="label">Facebook</span>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to=""
+            <a
+              to="https://instagram.com/viadelweb"
               className="icon"
               rel="noopener noreferrer"
               target="_blank"
@@ -396,11 +399,11 @@ const Main = (props) => {
                 }}
               />
               <span className="label">Instagram</span>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to=""
+            <a
+              to="https://github.com/viadelweb"
               className="icon"
               rel="noopener noreferrer"
               target="_blank"
@@ -414,10 +417,10 @@ const Main = (props) => {
                 }}
               />
               <span className="label">GitHub</span>
-            </Link>
+            </a>
           </li>
-          <li>
-            <Link
+          {/*<li>
+            <a
               to=""
               className="icon"
               rel="noopener noreferrer"
@@ -432,8 +435,26 @@ const Main = (props) => {
                 }}
               />
               <span className="label">Youtube</span>
-            </Link>
-          </li>
+            </a>
+              </li>*/}
+              <li>
+            <a
+              to="https://linkedin.com/viadelweb"
+              className="icon"
+              rel="noopener noreferrer"
+              target="_blank"
+              area-label=""
+            >
+              <RiLinkedinBoxFill
+                alt="LinkedIn"
+                style={{
+                  fontSize: '2em',
+                  color: 'gray',
+                }}
+              />
+              <span className="label">LinkedIn</span>
+            </a>
+              </li>
         </ul>
         {close}
       </article>

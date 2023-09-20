@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-//import { Link } from 'gatsby';
-//import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
 import PropTypes from 'prop-types'
 import AccordionImage from '../../accordion-image';
 import Pic01 from '../../../../static/assets/pic01.jpg'
@@ -10,7 +8,69 @@ import Server from '../../../../static/assets/terminal-2-640x287.jpg'
 import WebDev from '../../../../static/assets/smartmockups_glp.png'
 import WebHost from '../../../../static/assets/Top-10-hosting-accounting.jpg'
 import Form from '../../form';
-//import { platformsContainer, platforms } from "./services.module.css"
+//import { graphql } from 'gatsby';
+//import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+// Write a graphql query to get each services's image from the filesystem
+// Then pass the image to the AccordionImage component.
+
+/*
+graphql`
+  query {
+    webdev: file(relativePath: { eq: "smartmockups_glp.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    webhost: file(relativePath: { eq: "Top-10-hosting-accounting.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    ecomopt: file(relativePath: { eq: "ecommerce-platforms.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    automation: file(relativePath: { eq: "workflow-automation-final.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+
+    }
+    server: file(relativePath: { eq: "terminal-2-640x287.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 300
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`
+**/
+
+
+
+
+
 
 const Services = (props) => {
   //  const [isActive, setIsActive] = useState(false);
@@ -40,7 +100,7 @@ const Services = (props) => {
       </div>
     </div>
     <p>Don't care how it's made, you just need a dope website? I got you too.</p>
-    <Form formName="webdev" netlify data-netlify="true" />
+    <Form formName="webdev" ariaLabel="Web Design and Development Form" netlify data-netlify="true" dataNetlify="true" />
     </div>
   )
 
@@ -54,7 +114,7 @@ const Services = (props) => {
         You can also host your existing website on our servers at fair and transparent prices.
       </p>
 
-      <Form formName="webhosting" netlify dataNetlify="true" />
+      <Form formName="webhosting" ariaLabel="Web Hosting Form" netlify data-netlify="true" dataNetlify="true" />
     </div>
   )
 
@@ -64,7 +124,7 @@ const Services = (props) => {
         Problems are your shop is not optimized for search engines, not optimized for your customers, or not optimized for your business.
       </p>
       <p>Let us help you optimize your e-commerce shop for maximum sales. </p>
-      <Form formName="ecomopt" netlify data-netlify="true" />
+      <Form formName="ecomopt" ariaLabel="E-Commerce Form" netlify data-netlify="true" dataNetlify="true" />
     </div>
   )
   const workAutomationContent = () => (
@@ -78,7 +138,7 @@ const Services = (props) => {
       <p>
         The automation flow is fully customizable, and you can add as many apps as you need. The possibilities are endless.
       </p>
-      <Form formName="workautomation" netlify data-netlify="true" />
+      <Form formName="workautomation" ariaLabel="Workflow Automation Form" netlify data-netlify="true" dataNetlify="true" />
     </div>
   )
 
@@ -90,7 +150,7 @@ const Services = (props) => {
       <p>
         We can help you plan and manager your Cloud architecture, deploy your apps, scale horizontally and vertically, and manage your infrastructure, whether it's a single server or a multi-server cluster.
       </p>
-      <Form formName="server" netlify data-netlify="true" />
+      <Form formName="server" ariaLabel="Server Management Form" netlify data-netlify="true" dataNetlify="true"/>
     </div>
   )
 
@@ -99,7 +159,7 @@ const Services = (props) => {
       <p>
         Schedule a private 1 v 1 consultation with me to learn how to make your digital real estate work for you.
       </p>
-      <Form formName="consult" netlify data-netlify="true" />
+      <Form formName="consult" ariaLabel="Consultations Form" netlify data-netlify="true" dataNetlify="true" />
     </div>
   )
 
