@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Fade } from 'react-awesome-reveal'
+//import { Fade } from 'react-awesome-reveal'
 
 const AccordionImage = ({ title, subtitle, image, content, text }) => {
   const [isActive, setIsActive] = useState(true);
@@ -8,20 +8,35 @@ const AccordionImage = ({ title, subtitle, image, content, text }) => {
     setIsActive((prevIsActive) => !prevIsActive);
   }, []);
 
+  const handleKeyDown = useCallback((event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      toggleActive();
+    }
+  }, [toggleActive]);
+
+
+
   return (
     <>
       <div
         className="cursor-pointer"
         style={{ marginBottom: '2em' }}
-       /*onClick={() => setIsActive(!isActive)}*/
-       onClick={toggleActive}
+        onClick={toggleActive}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+        aria-expanded={isActive}
+        aria-controls="accordion-content"
+        aria-label={isActive ? 'Collapse accordion' : 'Expand accordion'}
+
       >
         {title && <h3 className="text-normal">{title}</h3>}
         {subtitle && <h4 className="text-normal">{subtitle}</h4>}
       </div>
 
       {isActive && (
-        <Fade>
+        <>
+        {/*<Fade>*/}
           <span className="image main">
             <div className="" id="accordion">
               <div className="accordion-content">
@@ -33,7 +48,8 @@ const AccordionImage = ({ title, subtitle, image, content, text }) => {
             {content && <p>{content}</p>}
             </div>
           </span>
-        </Fade>
+        {/*</Fade>*/}
+        </>
       )}
     </>
   )

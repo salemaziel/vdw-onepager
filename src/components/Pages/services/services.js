@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby';
-import { StaticImage } from "gatsby-plugin-image"
+//import { Link } from 'gatsby';
+//import { StaticImage } from "gatsby-plugin-image"
 import PropTypes from 'prop-types'
 import AccordionImage from '../../accordion-image';
 import Pic01 from '../../../../static/assets/pic01.jpg'
@@ -10,15 +10,15 @@ import Server from '../../../../static/assets/terminal-2-640x287.jpg'
 import WebDev from '../../../../static/assets/smartmockups_glp.png'
 import WebHost from '../../../../static/assets/Top-10-hosting-accounting.jpg'
 import Form from '../../form';
-import { platformsContainer, platforms } from "./services.module.css"
+//import { platformsContainer, platforms } from "./services.module.css"
 
 const Services = (props) => {
   //  const [isActive, setIsActive] = useState(false);
   const webdevContent = () => (
     <div className>
       <h3>Platforms:</h3>
-      <div className={platformsContainer}>
-        <div className={platforms}>
+      <div className="flex flex-row items-center justify-around">
+        <div className="flex flex-col items-center justify-center text-left">
       <p >
         <ul>
           <li>Wordpress</li>
@@ -28,7 +28,7 @@ const Services = (props) => {
         </ul>
       </p>
       </div>
-      <div className={platforms}>
+      <div className="flex flex-col items-center justify-center text-left">
       <p>
         <ul>
           <li>Gatsby</li>
@@ -64,7 +64,7 @@ const Services = (props) => {
         Problems are your shop is not optimized for search engines, not optimized for your customers, or not optimized for your business.
       </p>
       <p>Let us help you optimize your e-commerce shop for maximum sales. </p>
-      <Form formName="ecomopt" />
+      <Form formName="ecomopt" netlify data-netlify="true" />
     </div>
   )
   const workAutomationContent = () => (
@@ -78,7 +78,7 @@ const Services = (props) => {
       <p>
         The automation flow is fully customizable, and you can add as many apps as you need. The possibilities are endless.
       </p>
-      <Form formName="workautomation" />
+      <Form formName="workautomation" netlify data-netlify="true" />
     </div>
   )
 
@@ -90,7 +90,7 @@ const Services = (props) => {
       <p>
         We can help you plan and manager your Cloud architecture, deploy your apps, scale horizontally and vertically, and manage your infrastructure, whether it's a single server or a multi-server cluster.
       </p>
-      <Form formName="server" />
+      <Form formName="server" netlify data-netlify="true" />
     </div>
   )
 
@@ -99,7 +99,7 @@ const Services = (props) => {
       <p>
         Schedule a private 1 v 1 consultation with me to learn how to make your digital real estate work for you.
       </p>
-      <Form formName="consult" />
+      <Form formName="consult" netlify data-netlify="true" />
     </div>
   )
 

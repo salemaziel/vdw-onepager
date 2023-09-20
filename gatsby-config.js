@@ -1,3 +1,6 @@
+const config = require("./config/site")
+
+
 module.exports = {
   siteMetadata: {
     title: "Via Del Web | Web Solutions for Small Businesses and Entrepreneurs",
@@ -5,11 +8,11 @@ module.exports = {
     siteUrl: "https://viadelweb.com",
     siteImage: "/static/assets/logo-vertical-white2.png",
     description: "Let's build your Digital Real Estate.",
+    ...config
   },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -44,16 +47,22 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-matomo',
+      resolve: "gatsby-plugin-matomo",
       options: {
-        siteId: '4',
-        matomoUrl: 'https://m.rblartdesign.com',
-        siteUrl: 'https://viadelweb.com',
-        matomoJsScript: 'stats.js',
-        matomoPhpScript: 'stats.php',
+        siteId: "2",
+        matomoUrl: "https://analytics.viadelweb.cloud",
+        siteUrl: "https://viadelweb.com/",
+        // All the optional settings
+//        matomoPhpScript: "piwik.php",
+        matomoJsScript: "matomo.js",
+        exclude: ["/offline-plugin-app-shell-fallback/"],
+        requireConsent: false,
         disableCookies: true,
-        respectDnt: true,
-      }
+        //cookieDomain: "*.example.org",
+//        localScript: "/piwik.js",
+        dev: false,
+        enableJSErrorTracking: true,
+      },
     },
     'gatsby-plugin-remove-generator',
 //    {
