@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { navigate } from "gatsby-link";
 
 function encode(data) {
   return Object.keys(data)
@@ -37,11 +38,11 @@ const Form = (props) => {
       name={props.formName}
       method="POST"
       data-netlify={props.dataNetlify}
-      data-netlify-honeypot="bot-field"
       netlify
       onSubmit={handleSubmit} // Code Improvement Suggestion 1
     >
       <input type="hidden" name="form-name" value={props.formName} />
+      <input type="hidden" name="bot-field" />
       <div className="field half first">
         <label htmlFor="name">Name*</label>
         <input 
