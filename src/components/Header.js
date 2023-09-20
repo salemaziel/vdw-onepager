@@ -37,7 +37,7 @@ const NavItems = [
 const NavLinks = ({ NavTitle, NavItem, onOpenArticle, isExternal }) => (
     <li>
       <a
-        href={isExternal ? NavItem : 'javascript:void(0);'}
+        href={isExternal ? NavItem : 'javascript:;'}
         onClick={
           !isExternal
             ? () => {
