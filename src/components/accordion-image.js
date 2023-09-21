@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 //import { Fade } from 'react-awesome-reveal'
 
 const AccordionImage = ({ title, subtitle, image, content, text }) => {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   const toggleActive = useCallback(() => {
     setIsActive((prevIsActive) => !prevIsActive);
