@@ -25,9 +25,6 @@
       https://analytics.viadelweb.cloud/matomo.js,
       https://github.com, 
       https://identity.netlify.com, 
-      https://media-library.cloudinary.com, 
-      https://widget.cloudinary.com, 
-      https://www.youtube.com,
     '''      
     Access-Control-Allow-Methods = '''
       POST, 
@@ -57,7 +54,7 @@
       vibrate=(self),
       vr=(self)
     '''
-    Content-Security-Policy = "connect-src 'self' blob: https://analytics.viadelweb.cloud https://analytics.viadelweb.cloud/matomo.js https://upload-widget.cloudinary.com/1.32.6/global/all.js https://github.com https://identity.netlify.com https://media-library.cloudinary.com https://widget.cloudinary.com https://www.youtube.com https://res.cloudinary.com https://api.github.com https://ocsp.digicert.com; form-action 'self' 'https://netlify.com' 'https://api.netlify.com' ; font-src 'self' blob: data: https://analytics.viadelweb.cloud; frame-src 'self' https://analytics.viadelweb.cloud https://www.google.com/ https://cloudinary.com https://www.youtube.com https://twitter.com https://mobile.twitter.com https://widget.cloudinary.com; img-src 'self' blob: data: https://api.netlify.com https://widget.cloudinary.com; manifest-src 'self'; media-src 'self' blob: https://analytics.viadelweb.cloud https://res.cloudinary.com https://widget.cloudinary.com https://www.youtube.com; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://analytics.viadelweb.cloud https://media-library.cloudinary.com https://api.netlify.com https://netlify.com https://res.cloudinary.com https://platform.slack-edge.com https://widget.cloudinary.com https://www.youtube.com; script-src-elem 'self' blob: 'unsafe-inline' https://analytics.viadelweb.cloud/matomo.js https://www.youtube.com https://media-library.cloudinary.com https://widget.cloudinary.com; style-src 'self' 'unsafe-inline' https://m.rblartdesign.com https://github.com https://media-library.cloudinary.com https://identity.netlify.com https://res.cloudinary.com https://widget.cloudinary.com https://www.youtube.com https://analytics.viadelweb.cloud/matomo.js; prefetch-src 'self';  worker-src 'self' blob: https://analytics.viadelweb.cloud;"
+    Content-Security-Policy = "connect-src 'self' blob: https://analytics.viadelweb.cloud https://analytics.viadelweb.cloud/matomo.js https://ocsp.digicert.com; form-action 'self' ; font-src 'self' blob: data: https://analytics.viadelweb.cloud; frame-src 'self' https://analytics.viadelweb.cloud ; img-src 'self' blob: data: https://api.netlify.com ; manifest-src 'self'; media-src 'self' blob: https://analytics.viadelweb.cloud https://res.cloudinary.com https://www.youtube.com; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://analytics.viadelweb.cloud https://api.netlify.com https://netlify.com https://www.youtube.com; script-src-elem 'self' blob: 'unsafe-inline' https://analytics.viadelweb.cloud/matomo.js ; style-src 'self' 'unsafe-inline' https://analytics.viadelweb.cloud/matomo.js https://analytics.viadelweb.cloud/matomo.js; prefetch-src 'self';  worker-src 'self' blob: https://analytics.viadelweb.cloud;"
 [[headers]]
   for = "/static/*"
   [headers.values]
