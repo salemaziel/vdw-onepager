@@ -156,7 +156,7 @@ const Main = (props) => {
           are so prevalent with child sexual abuse that{' '}
           <a
             href="https://www.ministryinsured.com/church-insurance/liability/abuse-molestation/"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
             target="_blank"
           >
             {' '}
@@ -321,7 +321,6 @@ const Main = (props) => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
           aria-label="Contact Form"
         >
           <input type="hidden" name="form-name" value="contact" />
