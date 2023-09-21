@@ -323,6 +323,7 @@ const Main = (props) => {
           data-netlify-honeypot="bot-field"
           aria-label="Contact Form"
         >
+          <input type="hidden" name="bot-field" aria-hidden="true" />
           <input type="hidden" name="form-name" value="contact" />
           <div className="field half first">
             <label htmlFor="name">Name</label>
