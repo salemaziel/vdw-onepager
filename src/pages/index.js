@@ -97,12 +97,14 @@ class IndexPage extends React.PureComponent {
           </div>
           <div id="bg">
             <StaticImage 
-            id="bg" 
+            id="bg"
             formats={["AUTO", "WEBP", "AVIF"]}
             src="../../static/assets/city-bg.jpg" 
             alt=''
             loading='eager'
             layout='fullWidth'
+            placeholder='blurred'
+            className='object-cover object-fit'
             
             
             />
