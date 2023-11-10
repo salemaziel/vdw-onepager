@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 import { StaticImage } from 'gatsby-plugin-image'
+import Seo from '../components/seo'
 
 class IndexPage extends React.PureComponent {
   state = {
@@ -95,7 +96,16 @@ class IndexPage extends React.PureComponent {
             <Footer timeout={this.state.timeout} />
           </div>
           <div id="bg">
-            <StaticImage id="bg" formats={['auto', 'webp']} src="../../static/assets/city-bg.jpg" alt="City background" />
+            <StaticImage 
+            id="bg" 
+            formats={["AUTO", "WEBP", "AVIF"]}
+            src="../../static/assets/city-bg.jpg" 
+            alt=''
+            loading='eager'
+            layout='fullWidth'
+            
+            
+            />
           </div>
         </div>
       </Layout>
@@ -105,3 +115,11 @@ class IndexPage extends React.PureComponent {
 
 export default IndexPage;
 
+
+  export const Head = () => (
+    <Seo 
+    title="Via Del Web | Web Solutions for Small Businesses and Entrepreneurs"
+    description="Let's build your Digital Real Estate."
+//    ogImage={OGImage}
+     />
+    )

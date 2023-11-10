@@ -7,10 +7,10 @@ const NavItems = [
     NavTitle: 'Services',
     NavItem: 'services',
   },
-  {
-    NavTitle: 'Philosophy',
-    NavItem: 'philosophy',
-  },
+//  {
+//    NavTitle: 'Philosophy',
+//    NavItem: 'philosophy',
+//  },
   {
     NavTitle: 'Consultations',
     NavItem: 'consultations',

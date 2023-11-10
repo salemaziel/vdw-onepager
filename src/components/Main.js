@@ -322,6 +322,7 @@ const Main = (props) => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           aria-label="Contact Form"
+          data-netlify-recaptcha="true"
         >
           <input type="hidden" name="bot-field" aria-hidden="true" />
           <input type="hidden" name="form-name" value="contact" />
@@ -337,6 +338,7 @@ const Main = (props) => {
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" rows="4" required aria-label='Message' aria-required="true"></textarea>
           </div>
+          <div data-netlify-recaptcha="true"></div>
           <ul className="actions">
             <li>
               <input type="submit" value="Send Message" className="special" aria-label="Submit" />

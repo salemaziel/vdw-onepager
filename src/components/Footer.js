@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const Footer = (props) => (
     <footer id="footer" style={props.timeout ? {display: 'none'} : {}}>
-        <p className="copyright">&copy; RBL ART Designs
+        <p className="copyright">{new Date().getFullYear()} © Via Del Web
         {" "}
         {/*<a href="/privacy">Privacy</a>*/}</p>
     </footer>

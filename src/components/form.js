@@ -41,6 +41,8 @@ const Form = (props) => {
       netlify
       onSubmit={handleSubmit}
       aria-label={props.ariaLabel}
+      data-netlify-recaptcha="true"
+      data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="form-name" value={props.formName} />
       <input type="hidden" name="bot-field" aria-hidden="true" />
@@ -78,6 +80,7 @@ const Form = (props) => {
         aria-label="Message"
         />
       </div>
+      <div data-netlify-recaptcha="true"></div>
       <ul className="actions">
         <li>
           <input 
