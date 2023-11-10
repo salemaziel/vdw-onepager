@@ -15,10 +15,14 @@
       <StaticImage
         className="bio-avatar"
         objectPosition="50% 50%"
-        formats={["auto", "webp"]}
+        formats={["auto", "webp", "avif"]}
         src="../../static/assets/logo-vertical-white2.png"
         quality={95}
         alt="Via Del Web Logo"
+        layout="constrained"
+        loading="eager"
+        placeholder="blurred"
+        imgClassName="object-cover object-fit"
       />
     </div>
    )
